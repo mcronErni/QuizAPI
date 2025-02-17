@@ -265,3 +265,4 @@ C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.pdb
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.genruntimeconfig.cache
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\ref\QuizAPI.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.sourcelink.json

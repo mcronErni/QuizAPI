@@ -33,7 +33,9 @@ namespace QuizAPI.Contract.Repository
 
         public async Task<ICollection<Quiz>> Get()
         {
-            var quizzes = await _context.Quizzes.ToListAsync();
+            var quizzes = await _context.Quizzes
+                .Include(m => m.Mentor)
+                .ToListAsync();
             return quizzes;
         }
 

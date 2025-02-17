@@ -50,8 +50,8 @@ namespace QuizAPI.Controllers
             {
                 return NotFound();
             }
-
-            return Ok(_mapper.Map<ListMentorDTO>(mentor));
+            var mappedMentor = _mapper.Map<ListMentorDTO>(mentor);
+            return Ok(mappedMentor);
         }
 
         // PUT: api/Mentor/5
@@ -73,7 +73,8 @@ namespace QuizAPI.Controllers
             {
                 return BadRequest();
             }
-            return CreatedAtAction(nameof(GetMentor), new { id = createdMt.MentorId }, _mapper.Map<ListMentorDTO>(mentor));
+            var updatedMentor = _mapper.Map<ListMentorDTO>(createdMt);
+            return CreatedAtAction(nameof(GetMentor), new { id = createdMt.MentorId }, updatedMentor);
             //return StatusCode(201);
         }
 

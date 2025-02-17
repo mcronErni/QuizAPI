@@ -48,6 +48,14 @@ namespace QuizAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<QuizDTO>> PostAsync([FromBody] QuizDTO quiz)
         {
+
+            foreach (var question in quiz.Questions) 
+            {
+                if (!question.Choices.Contains(question.Answer)){
+                    question.Choices.Add(question.Answer);
+                }
+            }
+
             var mappedQuiz = _mapper.Map<Quiz>(quiz);
             var createdQuiz = await _quizRepository.CreateQuiz(mappedQuiz);
             if(createdQuiz == null)

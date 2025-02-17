@@ -17,6 +17,7 @@ builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 builder.Services.AddScoped<IBootcamperRepository, BootcamperRepository>();
 builder.Services.AddScoped<IQuizRepository, QuizRepository>();
 builder.Services.AddScoped<IBootcamperQuizRepository, BootcamperQuizRepository>();
+builder.Services.AddScoped<IMentorRepository, MentorRepository>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {

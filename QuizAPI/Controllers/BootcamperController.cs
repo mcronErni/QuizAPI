@@ -22,14 +22,14 @@ namespace QuizAPI.Controllers
         }
         // GET: api/<BootcamperController>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BootcamperDTO>>> GetAsync()
+        public async Task<ActionResult<IEnumerable<ListAllBootcamperDTO>>> GetAsync()
         {
             var bootcampers = await _bootcamperRepository.Get();
             if(bootcampers == null)
             {
                 return NotFound();
             }
-            return Ok(_mapper.Map<IEnumerable<BootcamperDTO>>(bootcampers));
+            return Ok(_mapper.Map<IEnumerable<ListAllBootcamperDTO>>(bootcampers));
         }
 
         // GET api/<BootcamperController>/5

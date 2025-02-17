@@ -1,4 +1,5 @@
-﻿using QuizAPI.Model;
+﻿using QuizAPI.Domain.DTO;
+using QuizAPI.Model;
 using System.ComponentModel.DataAnnotations;
 
 namespace QuizAPI.Contract.DTO
@@ -18,6 +19,6 @@ namespace QuizAPI.Contract.DTO
         [EmailAddress]
         public string Username { get; set; }
         public required string MentorEmail { get; set; }
-        public ICollection<Quiz>? Quizzes { get; set; }
+        public ICollection<ListQuizDTO>? Quizzes { get; set; }
     }
 }

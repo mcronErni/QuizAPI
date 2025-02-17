@@ -27,6 +27,7 @@ namespace QuizAPI.Contract.Repository
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 throw new Exception("Something went wrong while adding the data");
             }
         }
@@ -53,6 +54,7 @@ namespace QuizAPI.Contract.Repository
         public async Task<Mentor?> GetById(int id)
         {
             var mentor = await _context.Mentors
+                .Include(q => q.Quizzes)
                 .FirstOrDefaultAsync(bc => bc.MentorId == id);
             if (mentor == null)
             {

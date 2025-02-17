@@ -58,6 +58,7 @@ namespace QuizAPI.Contract.Repository
         public async Task<Bootcamper?> GetById(int id)
         {
             var bootcampers = await _context.Bootcampers
+                .Include(q => q.BootcamperQuizzes)
                 .FirstOrDefaultAsync(bc => bc.BootcamperId == id);
             if(bootcampers == null)
             {

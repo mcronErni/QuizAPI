@@ -18,8 +18,8 @@ namespace QuizAPI.Mapping
                 .ForMember(dest => dest.TotalScore, opt => opt.MapFrom(src => src.Quizzes.TotalScore))
                 .ForMember(dest => dest.BootcamperName, opt => opt.MapFrom(src => src.Bootcampers.Name));
 
-            CreateMap<Quiz, QuizDTO>()
-                .ForMember(dest => dest.MentorName, opt => opt.MapFrom(src => src.Mentor.MentorName));
+            CreateMap<Quiz, QuizDTO>();
+                //.ForMember(dest => dest.MentorName, opt => opt.MapFrom(src => src.Mentor.MentorName));
             CreateMap<QuizDTO, Quiz>();
 
             CreateMap<Quiz, ListQuizDTO>()
@@ -27,10 +27,12 @@ namespace QuizAPI.Mapping
             CreateMap<ListQuizDTO, Quiz>();
 
             CreateMap<AddBootcamperQuizDTO, BootcamperQuiz>();
-            CreateMap<BootcamperDTO, Bootcamper>();
+            CreateMap<BootcamperDTO, Bootcamper>().ReverseMap();
+            CreateMap<ListAllBootcamperDTO, Bootcamper>().ReverseMap();
 
             CreateMap<MentorDTO, Mentor>().ReverseMap();
-            CreateMap<ListMentorDTO, Mentor>().ReverseMap();
+            CreateMap<Mentor, ListMentorDTO>()
+                .ForMember(dest => dest.Quizzes, opt => opt.MapFrom(src => src.Quizzes));
         }
     }
 }
