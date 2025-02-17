@@ -33,6 +33,10 @@ namespace QuizAPI.Mapping
             CreateMap<MentorDTO, Mentor>().ReverseMap();
             CreateMap<Mentor, ListMentorDTO>()
                 .ForMember(dest => dest.Quizzes, opt => opt.MapFrom(src => src.Quizzes));
+
+            CreateMap<AccountDTO, Account>().ReverseMap();
+            CreateMap<ShowAccountDTO, Account>().ReverseMap();
+            CreateMap<RegisterAccountDTO, Account>();
         }
     }
 }

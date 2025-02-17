@@ -5,7 +5,7 @@
 namespace QuizAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class with_auth : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,17 +24,66 @@ namespace QuizAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Mentors",
+                columns: table => new
+                {
+                    MentorId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MentorName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Mentors", x => x.MentorId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Accounts",
+                columns: table => new
+                {
+                    AccountId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BootcamperId = table.Column<int>(type: "int", nullable: true),
+                    MentorId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Accounts", x => x.AccountId);
+                    table.ForeignKey(
+                        name: "FK_Accounts_Bootcampers_BootcamperId",
+                        column: x => x.BootcamperId,
+                        principalTable: "Bootcampers",
+                        principalColumn: "BootcamperId");
+                    table.ForeignKey(
+                        name: "FK_Accounts_Mentors_MentorId",
+                        column: x => x.MentorId,
+                        principalTable: "Mentors",
+                        principalColumn: "MentorId");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Quizzes",
                 columns: table => new
                 {
                     QuizId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     QuizTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TotalScore = table.Column<int>(type: "int", nullable: false)
+                    TotalScore = table.Column<int>(type: "int", nullable: false),
+                    MentorId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Quizzes", x => x.QuizId);
+                    table.ForeignKey(
+                        name: "FK_Quizzes_Mentors_MentorId",
+                        column: x => x.MentorId,
+                        principalTable: "Mentors",
+                        principalColumn: "MentorId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -84,6 +133,20 @@ namespace QuizAPI.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Accounts_BootcamperId",
+                table: "Accounts",
+                column: "BootcamperId",
+                unique: true,
+                filter: "[BootcamperId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Accounts_MentorId",
+                table: "Accounts",
+                column: "MentorId",
+                unique: true,
+                filter: "[MentorId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_BootcamperQuizzes_QuizId",
                 table: "BootcamperQuizzes",
                 column: "QuizId");
@@ -92,11 +155,19 @@ namespace QuizAPI.Migrations
                 name: "IX_Question_QuizId",
                 table: "Question",
                 column: "QuizId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Quizzes_MentorId",
+                table: "Quizzes",
+                column: "MentorId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Accounts");
+
             migrationBuilder.DropTable(
                 name: "BootcamperQuizzes");
 
@@ -108,6 +179,9 @@ namespace QuizAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "Quizzes");
+
+            migrationBuilder.DropTable(
+                name: "Mentors");
         }
     }
 }

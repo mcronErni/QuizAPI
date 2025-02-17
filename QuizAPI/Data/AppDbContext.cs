@@ -13,6 +13,7 @@ namespace QuizAPI.Data
         public DbSet<Bootcamper> Bootcampers { get; set; }
         public DbSet<Mentor> Mentors { get; set; }
         public DbSet<BootcamperQuiz> BootcamperQuizzes { get; set; }
+        public DbSet<Account> Accounts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

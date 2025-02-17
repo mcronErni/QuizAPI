@@ -266,3 +266,4 @@ C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.genruntim
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\ref\QuizAPI.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\AutoMapper.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.sourcelink.json
+C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -6,22 +6,25 @@ namespace QuizAPI.Domain.DTO
     {
         //public int BootcamperId { get; set; }
         public required string Name { get; set; }
-        public required string BootcamperEmail { get; set; }
-        public required string Username { get; set; }
-        public required string Password { get; set; }
+        //public required string BootcamperEmail { get; set; }
+        //public required string Username { get; set; }
+        //public required string Password { get; set; }
         //public ICollection<BootcamperQuizDTO>? Quizzes { get; set; }
+        public ShowAccountDTO Account { get; set; }
     }
 
     public class ListAllBootcamperDTO
     {
         public required string Name { get; set; }
-        public required string BootcamperEmail { get; set; }
+        public ShowAccountDTO Account { get; set; }
+        //public required string BootcamperEmail { get; set; }
     }
 
     public class ListOneBootcamperDTO
     {
         public required string Name { get; set; }
-        public required string BootcamperEmail { get; set; }
+        public ShowAccountDTO Account { get; set; }
+        //public required string BootcamperEmail { get; set; }
         public ICollection<BootcamperQuizDTO>? Quizzes { get; set; }
     }
 }

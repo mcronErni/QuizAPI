@@ -4,8 +4,10 @@ namespace QuizAPI.Contract.Interface
 {
     public interface IAuthRepository
     {
-        Task<Bootcamper> Register(Bootcamper bootcamper);
-        Task<Bootcamper> Login(string username, string password);
-        Task<bool>  UserExists(string username);
+        Task<Account> Register(Account account, string password);
+        Task<Account> Login(string usernameOrEmail, string password);
+        Task<bool> UserExists(string username, string email);
+        Task Logout();
     }
+
 }
