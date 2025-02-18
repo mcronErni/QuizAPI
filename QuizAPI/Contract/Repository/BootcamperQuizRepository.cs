@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using QuizAPI.Contract.Interface;
 using QuizAPI.Data;
 using QuizAPI.Model;
@@ -23,22 +24,43 @@ namespace QuizAPI.Contract.Repository
                 return null;
             }
 
-            var bootcamperQuiz = await _context.BootcamperQuizzes.AddAsync(bq);
+            var result = await _context.BootcamperQuizzes.FindAsync(bq.BootcamperId, bq.QuizId);
+
+            if(result == null)
+            {
+                var bootcamperQuiz = await _context.BootcamperQuizzes.AddAsync(bq);
+                if (bootcamperQuiz == null)
+                {
+                    return null;
+                }
+                await _context.SaveChangesAsync();
+                return bootcamperQuiz.Entity;
+            }
+            else
+            {
+                result.Score = bq.Score;
+                await _context.SaveChangesAsync();
+                return result;
+            }
+
+            
+            
+        }
+
+        public async Task<ICollection<BootcamperQuiz>> GetAllBootcamperQuizByQuizId(int quizId)
+        {
+            var bootcamperQuiz = await _context.BootcamperQuizzes.Where(q => q.QuizId == quizId)
+                .Include(q => q.Quizzes)
+                .Include(b => b.Bootcampers)
+                .ToListAsync();
             if(bootcamperQuiz == null)
             {
                 return null;
             }
-            await _context.SaveChangesAsync();
-            return bootcamperQuiz.Entity;
-        }
-
-        public async Task<ICollection<BootcamperQuiz>> GetAllBootcamperQuiz()
-        {
-            var bootcamperQuiz = await _context.BootcamperQuizzes.ToListAsync();
             return bootcamperQuiz;
         }
 
-        public async Task<BootcamperQuiz> GetBootcamperQuiz(int bootcamperId, int quizId)
+        public async Task<BootcamperQuiz> GetBootcamperQuizForBootcamper(int bootcamperId, int quizId)
         {
             var result = await _context.BootcamperQuizzes.FindAsync(bootcamperId, quizId);
             if(result == null)
@@ -46,6 +68,19 @@ namespace QuizAPI.Contract.Repository
                 return null;
             }
             return result;
+        }
+
+        public async Task<ICollection<BootcamperQuiz>> GetBootcamperQuizForBootcamperAllQuiz(int bootcamperId)
+        {
+            var bootcamperQuiz = await _context.BootcamperQuizzes.Where(q => q.BootcamperId == bootcamperId)
+                .Include(q => q.Quizzes)
+                .Include(b => b.Bootcampers)
+                .ToListAsync();
+            if (bootcamperQuiz == null)
+            {
+                return null;
+            }
+            return bootcamperQuiz;
         }
     }
 }

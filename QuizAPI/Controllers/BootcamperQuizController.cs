@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using QuizAPI.Contract.DTO;
 using QuizAPI.Contract.Interface;
 using QuizAPI.Model;
@@ -21,35 +23,66 @@ namespace QuizAPI.Controllers
 
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<BootcamperQuizDTO>>> GetAll()
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<BootcamperQuizDTO>>> GetAll([FromRoute] int id)
         {
-            var bq = await _bootcamperQuizRepository.GetAllBootcamperQuiz();
-            return Ok(bq);
+            var bq = await _bootcamperQuizRepository.GetAllBootcamperQuizByQuizId(id);
+            if(bq == null)
+            {
+                return NotFound();
+            }
+            var mapped = _mapper.Map<ICollection<BootcamperQuizDTO>>(bq);
+            return Ok(mapped);
+        }
+
+        [HttpGet("bootcamper/{id}")]
+        public async Task<ActionResult<IEnumerable<BootcamperQuizDTO>>> GetAllForBootcamper([FromRoute] int id)
+        {
+            var bq = await _bootcamperQuizRepository.GetBootcamperQuizForBootcamperAllQuiz(id);
+            if (bq == null)
+            {
+                return NotFound();
+            }
+            var mapped = _mapper.Map<ICollection<BootcamperQuizDTO>>(bq);
+            return Ok(mapped);
         }
 
         [HttpGet("{bootcamperId}/{quizId}")]
-        public async Task<ActionResult<BootcamperQuizDTO>> GetById([FromRoute] int bootcamperId, int quizId)
+        public async Task<ActionResult<BootcamperQuizDTO>> GetById([FromRoute] int bootcamperId, [FromRoute]int quizId)
         {
 
-            var bq = await _bootcamperQuizRepository.GetBootcamperQuiz(bootcamperId, quizId);
+            var bq = await _bootcamperQuizRepository.GetBootcamperQuizForBootcamper(bootcamperId, quizId);
             if (bq == null)
             {
                 return NotFound(new { Message="No Entry with that ID"});
             }
-            return Ok(bq);
+            var mapped = _mapper.Map<BootcamperQuizDTO>(bq);
+            return Ok(mapped);
         }
 
         [HttpPost]
         public async Task<ActionResult<BootcamperQuizDTO>> AddBootcamperQuiz(AddBootcamperQuizDTO addBootcamperQuizDTO)
         {
-            var mappedBq = _mapper.Map<BootcamperQuiz>(addBootcamperQuizDTO);
-            var createdBq = await _bootcamperQuizRepository.CreateBootcamperQuiz(mappedBq);
-            if (createdBq == null)
+            try
             {
-                return BadRequest(new { Message = "No Entry with that ID" });
+                var mappedBq = _mapper.Map<BootcamperQuiz>(addBootcamperQuizDTO);
+                var createdBq = await _bootcamperQuizRepository.CreateBootcamperQuiz(mappedBq);
+                if (createdBq == null)
+                {
+                    return BadRequest(new { Message = "No Entry with that ID" });
+                }
+                var mapped = _mapper.Map<BootcamperQuizDTO>(createdBq);
+                return Ok(mapped);
             }
-            return CreatedAtAction(nameof(GetById), new { bootcamperId = createdBq.BootcamperId, quizId = createdBq.QuizId }, createdBq);
+            catch (DbUpdateException ex) when (ex.InnerException is SqlException sqlEx && sqlEx.Number == 2627) // Unique constraint violation
+            {
+                return Conflict("Quiz submission already exists.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return StatusCode(500, "An error occurred while submitting the quiz.");
+            }
         }
     }
 }
