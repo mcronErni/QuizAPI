@@ -11,8 +11,8 @@ using QuizAPI.Data;
 namespace QuizAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250217062613_with_auth")]
-    partial class with_auth
+    [Migration("20250218033416_u_edit")]
+    partial class u_edit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -150,7 +150,7 @@ namespace QuizAPI.Migrations
 
                     b.HasIndex("QuizId");
 
-                    b.ToTable("Question");
+                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("QuizAPI.Model.Quiz", b =>

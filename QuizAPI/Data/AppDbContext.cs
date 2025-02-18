@@ -15,11 +15,19 @@ namespace QuizAPI.Data
         public DbSet<BootcamperQuiz> BootcamperQuizzes { get; set; }
         public DbSet<Account> Accounts { get; set; }
 
+        public DbSet<Question> Questions { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BootcamperQuiz>()
                 .HasKey(bq => new { bq.BootcamperId, bq.QuizId});
             base.OnModelCreating(modelBuilder);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information)
+                          .EnableSensitiveDataLogging();
         }
 
     }

@@ -67,9 +67,17 @@ namespace QuizAPI.Controllers
         }
 
         // PUT api/<BootcamperController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPatch("{id}")]
+        public async Task<ActionResult<QuizDTO>> Put([FromRoute]int id, [FromBody] QuizDTO quiz)
         {
+            var mappedQuiz = _mapper.Map<Quiz>(quiz);
+            var updatedQuiz = await _quizRepository.UpdateQuiz(id,mappedQuiz);
+            if (updatedQuiz == null)
+            {
+                return NotFound(new { Message="No Quiz to Edit"});
+            }
+            //return CreatedAtAction(nameof(GetById), new { id = updatedQuiz.Id }, _mapper.Map<QuizDTO>(updatedQuiz));
+            return Ok();
         }
 
         // DELETE api/<BootcamperController>/5
@@ -78,6 +86,18 @@ namespace QuizAPI.Controllers
         {
             var quiz = await _quizRepository.DeleteQuiz(id);
             return NoContent();
+        }
+
+        [HttpGet("Mentor/{id}")]
+        public async Task<ActionResult<ListQuizDTO>> GetByMentorId(int id)
+        {
+            var quizzes = await _quizRepository.GetByMentorId(id);
+
+            if(quizzes == null)
+            {
+                return NotFound(new {Message="No quizzes"});
+            }
+            return Ok(_mapper.Map<IEnumerable<ListQuizDTO>>(quizzes));
         }
     }
 }

@@ -3,6 +3,58 @@
   "WorkspaceRootPath": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\repository\\quizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\repository\\quizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\interface\\iquizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\interface\\iquizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\model\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\model\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\dto\\quizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\dto\\quizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\model\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\model\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\dto\\mentordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\dto\\mentordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\controllers\\mentorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\controllers\\mentorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\repository\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\repository\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,36 +63,16 @@
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\model\\bootcamper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\model\\bootcamper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\dto\\mentordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\dto\\mentordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\dto\\bootcamperdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\dto\\bootcamperdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\controllers\\mentorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\controllers\\mentorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\repository\\mentorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,32 +83,12 @@
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\controllers\\bootcampercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\dto\\addbootcamperquizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\dto\\addbootcamperquizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\dto\\quizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\dto\\quizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\repository\\quizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\repository\\quizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\model\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\model\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\dto\\bootcamperquizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\dto\\bootcamperquizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\model\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\model\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\interface\\imentorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,10 +114,6 @@
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\repository\\bootcamperquizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\interface\\iquizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\interface\\iquizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|c:\\users\\extcrmh\\source\\repos\\quizapi\\quizapi\\contract\\interface\\ibootcamperquizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{068AA1ED-1E04-465B-9902-97498AA3AA8C}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\contract\\interface\\ibootcamperquizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -117,7 +125,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -125,28 +133,129 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Mapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Mapping\\MappingProfile.cs",
-              "RelativeToolTip": "QuizAPI\\Mapping\\MappingProfile.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCYAAAA1AAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "MentorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\MentorRepository.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Contract\\Repository\\MentorRepository.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\MentorRepository.cs",
+              "RelativeToolTip": "QuizAPI\\Contract\\Repository\\MentorRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwDgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T08:00:30.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-14T08:59:30.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MentorController.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\MentorController.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Controllers\\MentorController.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\MentorController.cs",
+              "RelativeToolTip": "QuizAPI\\Controllers\\MentorController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwEgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T09:07:57.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MentorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\MentorDTO.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\MentorDTO.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\MentorDTO.cs",
+              "RelativeToolTip": "QuizAPI\\Contract\\DTO\\MentorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T08:45:47.084Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Bootcamper.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Bootcamper.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Model\\Bootcamper.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Bootcamper.cs",
-              "RelativeToolTip": "QuizAPI\\Model\\Bootcamper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAAeAAAAAAAAAA==",
+              "Title": "QuizDTO.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\QuizDTO.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\QuizDTO.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\QuizDTO.cs",
+              "RelativeToolTip": "QuizAPI\\Contract\\DTO\\QuizDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T08:34:18.437Z",
+              "WhenOpened": "2025-02-11T08:55:27.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Mentor.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Mentor.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Model\\Mentor.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Mentor.cs",
+              "RelativeToolTip": "QuizAPI\\Model\\Mentor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T01:05:28.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QuizController.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\QuizController.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Controllers\\QuizController.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\QuizController.cs",
+              "RelativeToolTip": "QuizAPI\\Controllers\\QuizController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAIwEkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T02:51:45.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuizRepository.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\QuizRepository.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Contract\\Repository\\QuizRepository.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\QuizRepository.cs",
+              "RelativeToolTip": "QuizAPI\\Contract\\Repository\\QuizRepository.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAIwFcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T09:34:38.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IQuizRepository.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Interface\\IQuizRepository.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Contract\\Interface\\IQuizRepository.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Interface\\IQuizRepository.cs",
+              "RelativeToolTip": "QuizAPI\\Contract\\Interface\\IQuizRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T09:04:24.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Question.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Model\\Question.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Question.cs",
+              "RelativeToolTip": "QuizAPI\\Model\\Question.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T07:48:39.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "QuizAPI\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T07:41:29.819Z",
               "EditorCaption": ""
             },
             {
@@ -157,7 +266,7 @@
               "RelativeDocumentMoniker": "QuizAPI\\Program.cs",
               "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Program.cs",
               "RelativeToolTip": "QuizAPI\\Program.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADAAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAjwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-11T07:29:16.779Z",
               "EditorCaption": ""
@@ -165,71 +274,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "QuizController.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\QuizController.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Controllers\\QuizController.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\QuizController.cs",
-              "RelativeToolTip": "QuizAPI\\Controllers\\QuizController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwDIAAAAAAAAAAAAAAA==",
+              "Title": "Quiz.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Quiz.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Model\\Quiz.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Quiz.cs",
+              "RelativeToolTip": "QuizAPI\\Model\\Quiz.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T02:51:45.767Z",
+              "WhenOpened": "2025-02-18T03:29:04.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountDTO.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\AccountDTO.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\AccountDTO.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\AccountDTO.cs",
-              "RelativeToolTip": "QuizAPI\\Contract\\DTO\\AccountDTO.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T05:29:25.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "QuizAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAAAI0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T05:43:45.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BootcamperDTO.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\BootcamperDTO.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\BootcamperDTO.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\BootcamperDTO.cs",
-              "RelativeToolTip": "QuizAPI\\Contract\\DTO\\BootcamperDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T08:55:59.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthRepository.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\AuthRepository.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Contract\\Repository\\AuthRepository.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\AuthRepository.cs",
-              "RelativeToolTip": "QuizAPI\\Contract\\Repository\\AuthRepository.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T05:11:29.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "BootcamperController.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\BootcamperController.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Controllers\\BootcamperController.cs",
@@ -237,51 +294,97 @@
               "RelativeToolTip": "QuizAPI\\Controllers\\BootcamperController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAjwC8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T00:26:48.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T00:26:48.88Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MentorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\MentorRepository.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Contract\\Repository\\MentorRepository.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\MentorRepository.cs",
-              "RelativeToolTip": "QuizAPI\\Contract\\Repository\\MentorRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwDgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T08:59:30.425Z",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "QuizAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\appsettings.json",
+              "RelativeToolTip": "QuizAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-18T03:21:39.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "MentorController.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\MentorController.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Controllers\\MentorController.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\MentorController.cs",
-              "RelativeToolTip": "QuizAPI\\Controllers\\MentorController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAgwEgAAAANAAAAAAAAAA==",
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "QuizAPI\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T09:07:57.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MentorDTO.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\MentorDTO.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\MentorDTO.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\MentorDTO.cs",
-              "RelativeToolTip": "QuizAPI\\Contract\\DTO\\MentorDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T08:45:47.084Z",
+              "WhenOpened": "2025-02-17T08:00:30.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "BootcamperDTO.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\BootcamperDTO.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\BootcamperDTO.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\BootcamperDTO.cs",
+              "RelativeToolTip": "QuizAPI\\Contract\\DTO\\BootcamperDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T08:55:59.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "QuizAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAI0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T05:43:45.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Contract\\Repository\\AuthRepository.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\AuthRepository.cs",
+              "RelativeToolTip": "QuizAPI\\Contract\\Repository\\AuthRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T05:11:29.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountDTO.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\AccountDTO.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\AccountDTO.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\AccountDTO.cs",
+              "RelativeToolTip": "QuizAPI\\Contract\\DTO\\AccountDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T05:29:25.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Bootcamper.cs",
+              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Bootcamper.cs",
+              "RelativeDocumentMoniker": "QuizAPI\\Model\\Bootcamper.cs",
+              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Bootcamper.cs",
+              "RelativeToolTip": "QuizAPI\\Model\\Bootcamper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T08:34:18.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "BootcamperQuizDTO.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\BootcamperQuizDTO.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\BootcamperQuizDTO.cs",
@@ -289,51 +392,11 @@
               "RelativeToolTip": "QuizAPI\\Contract\\DTO\\BootcamperQuizDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T00:52:46.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T00:52:46.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "QuizRepository.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\QuizRepository.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Contract\\Repository\\QuizRepository.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\QuizRepository.cs",
-              "RelativeToolTip": "QuizAPI\\Contract\\Repository\\QuizRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAArwBMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T09:34:38.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "QuizAPI\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T07:41:29.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "QuizDTO.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\QuizDTO.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\QuizDTO.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\QuizDTO.cs",
-              "RelativeToolTip": "QuizAPI\\Contract\\DTO\\QuizDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T08:55:27.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "AddBootcamperQuizDTO.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\DTO\\AddBootcamperQuizDTO.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Contract\\DTO\\AddBootcamperQuizDTO.cs",
@@ -341,38 +404,11 @@
               "RelativeToolTip": "QuizAPI\\Contract\\DTO\\AddBootcamperQuizDTO.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T00:59:47.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T00:59:47.639Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Question.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Question.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Model\\Question.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Question.cs",
-              "RelativeToolTip": "QuizAPI\\Model\\Question.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T07:48:39.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Quiz.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Quiz.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Model\\Quiz.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\Quiz.cs",
-              "RelativeToolTip": "QuizAPI\\Model\\Quiz.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T08:20:21.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "IMentorRepository.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Interface\\IMentorRepository.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Contract\\Interface\\IMentorRepository.cs",
@@ -380,12 +416,11 @@
               "RelativeToolTip": "QuizAPI\\Contract\\Interface\\IMentorRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T08:58:04.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-14T08:58:04.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "MentorRepository.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\AppData\\Local\\SourceServer\\41f2b8703af12b4e0e2fc0cce2015c0aab95730732d3ac40c405b56468b89dd8\\QuizAPI\\Contract\\Repository\\MentorRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\41f2b8703af12b4e0e2fc0cce2015c0aab95730732d3ac40c405b56468b89dd8\\QuizAPI\\Contract\\Repository\\MentorRepository.cs",
@@ -393,12 +428,11 @@
               "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\41f2b8703af12b4e0e2fc0cce2015c0aab95730732d3ac40c405b56468b89dd8\\QuizAPI\\Contract\\Repository\\MentorRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T03:18:58.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T03:18:58.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "BootcamperQuizController.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Controllers\\BootcamperQuizController.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Controllers\\BootcamperQuizController.cs",
@@ -410,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "IBootcamperRepository.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Interface\\IBootcamperRepository.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Contract\\Interface\\IBootcamperRepository.cs",
@@ -422,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "BootcamperQuiz.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Model\\BootcamperQuiz.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Model\\BootcamperQuiz.cs",
@@ -434,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "BootcamperQuizRepository.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Repository\\BootcamperQuizRepository.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Contract\\Repository\\BootcamperQuizRepository.cs",
@@ -446,19 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IQuizRepository.cs",
-              "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Interface\\IQuizRepository.cs",
-              "RelativeDocumentMoniker": "QuizAPI\\Contract\\Interface\\IQuizRepository.cs",
-              "ToolTip": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Interface\\IQuizRepository.cs",
-              "RelativeToolTip": "QuizAPI\\Contract\\Interface\\IQuizRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T09:04:24.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "IBootcamperQuizRepository.cs",
               "DocumentMoniker": "C:\\Users\\extcrmh\\source\\repos\\QuizAPI\\QuizAPI\\Contract\\Interface\\IBootcamperQuizRepository.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Contract\\Interface\\IBootcamperQuizRepository.cs",

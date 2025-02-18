@@ -418,7 +418,7 @@
     "ContainingType": "QuizAPI.Controllers.QuizController",
     "Method": "Put",
     "RelativePath": "api/Quiz/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -428,15 +428,19 @@
         "IsRequired": true
       },
       {
-        "Name": "value",
-        "Type": "System.String",
+        "Name": "quiz",
+        "Type": "QuizAPI.Domain.DTO.QuizDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "QuizAPI.Domain.DTO.QuizDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 200
       }
     ]
@@ -456,5 +460,31 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuizAPI.Controllers.QuizController",
+    "Method": "GetByMentorId",
+    "RelativePath": "api/Quiz/Mentor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "QuizAPI.Domain.DTO.ListQuizDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

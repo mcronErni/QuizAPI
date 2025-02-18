@@ -147,7 +147,7 @@ namespace QuizAPI.Migrations
 
                     b.HasIndex("QuizId");
 
-                    b.ToTable("Question");
+                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("QuizAPI.Model.Quiz", b =>

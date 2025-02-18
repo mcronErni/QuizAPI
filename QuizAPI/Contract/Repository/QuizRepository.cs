@@ -51,9 +51,66 @@ namespace QuizAPI.Contract.Repository
             return quiz;
         }
 
-        public Task<Quiz>? UpdateQuiz(int id, Quiz quiz)
+        public async Task<ICollection<Quiz>?> GetByMentorId(int mentorId)
         {
-            throw new NotImplementedException();
+            var quizzes = await _context.Quizzes
+                .Include (q => q.Mentor)
+                .Where(q => q.MentorId == mentorId)
+                .ToListAsync();
+
+            return quizzes;
         }
+
+        public async Task<Quiz>? UpdateQuiz(int id, Quiz quiz)
+        {
+            Console.WriteLine(quiz.QuizId);
+            Console.WriteLine(id);
+            // Load the existing quiz including its related questions
+            var quizToBeEdited = await _context.Quizzes
+                .Include(q => q.Questions)
+                .FirstOrDefaultAsync(q => q.QuizId == id);
+
+            if (quizToBeEdited == null)
+            {
+                return null;
+            }
+
+            // Update the properties of the quiz
+            quizToBeEdited.QuizTitle = quiz.QuizTitle;
+            quizToBeEdited.TotalScore = quiz.TotalScore;
+
+            // Update the related questions
+            // First, remove any questions that are no longer in the updated quiz
+            var questionsToRemove = quizToBeEdited.Questions
+                .Where(q => !quiz.Questions.Any(q2 => q2.QuestionId == q.QuestionId))
+                .ToList();
+            foreach (var question in questionsToRemove)
+            {
+                _context.Questions.Remove(question);
+            }
+
+            // Next, update existing questions and add new ones
+            foreach (var question in quiz.Questions)
+            {
+                var existingQuestion = quizToBeEdited.Questions
+                    .FirstOrDefault(q => q.QuestionId == question.QuestionId);
+                if (existingQuestion != null)
+                {
+                    // Update existing question
+                    existingQuestion.MQuestion = question.MQuestion;
+                    existingQuestion.Answer = question.Answer;
+                    // Update other properties as needed
+                }
+                else
+                {
+                    // Add new question
+                    quizToBeEdited.Questions.Add(question);
+                }
+            }
+
+            await _context.SaveChangesAsync();
+            return quizToBeEdited;
+        }
+
     }
 }
