@@ -8,6 +8,7 @@ namespace QuizAPI.Domain.DTO
         public int QuizId { get; set; }
         public string QuizTitle { get; set; }
         public int TotalScore { get; set; }
+        public bool IsDeleted { get; set; }
         public int MentorId { get; set; }
         //public string MentorName { get; set; }
         public required List<Question> Questions { get; set; }

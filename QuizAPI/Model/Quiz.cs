@@ -13,6 +13,10 @@ namespace QuizAPI.Model
         public required List<Question> Questions { get; set; }
         [Required]
         public required int TotalScore { get; set; }
+
+        [Required]
+        public bool IsDeleted { get; set; }
+
         [Required]
         [ForeignKey(nameof(Mentor))]
         public int MentorId { get; set; }

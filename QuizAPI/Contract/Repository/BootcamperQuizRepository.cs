@@ -52,6 +52,7 @@ namespace QuizAPI.Contract.Repository
             var bootcamperQuiz = await _context.BootcamperQuizzes.Where(q => q.QuizId == quizId)
                 .Include(q => q.Quizzes)
                 .Include(b => b.Bootcampers)
+                .Where(q => q.Quizzes.IsDeleted == false)
                 .ToListAsync();
             if(bootcamperQuiz == null)
             {
@@ -75,6 +76,7 @@ namespace QuizAPI.Contract.Repository
             var bootcamperQuiz = await _context.BootcamperQuizzes.Where(q => q.BootcamperId == bootcamperId)
                 .Include(q => q.Quizzes)
                 .Include(b => b.Bootcampers)
+                .Where(q => q.Quizzes.IsDeleted == false)
                 .ToListAsync();
             if (bootcamperQuiz == null)
             {

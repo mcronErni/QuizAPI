@@ -15,6 +15,7 @@ namespace QuizAPI.Contract.Repository
         }
         public async Task<Quiz?> CreateQuiz(Quiz quiz)
         {
+            quiz.IsDeleted = false;
             var created_quiz = await _context.Quizzes.AddAsync(quiz);
             if (created_quiz == null) { return null; }
             await _context.SaveChangesAsync();
@@ -26,7 +27,8 @@ namespace QuizAPI.Contract.Repository
         {
             var quiz = await _context.Quizzes.FirstOrDefaultAsync(q => q.QuizId == id);
             if (quiz == null) { return null; }
-            _context.Remove(quiz);
+            quiz.IsDeleted = true;
+            //_context.Remove(quiz);
             await _context.SaveChangesAsync();
             return quiz;
         }
@@ -35,6 +37,7 @@ namespace QuizAPI.Contract.Repository
         {
             var quizzes = await _context.Quizzes
                 .Include(m => m.Mentor)
+                .Where(q => q.IsDeleted == false)
                 .ToListAsync();
             return quizzes;
         }
@@ -43,6 +46,7 @@ namespace QuizAPI.Contract.Repository
         {
             var quiz = await _context.Quizzes
                 .Include(q => q.Questions)
+                .Where(q => q.IsDeleted == false)
                 .FirstOrDefaultAsync(q => q.QuizId.Equals(id));
             if(quiz == null)
             {
@@ -55,7 +59,7 @@ namespace QuizAPI.Contract.Repository
         {
             var quizzes = await _context.Quizzes
                 .Include (q => q.Mentor)
-                .Where(q => q.MentorId == mentorId)
+                .Where(q => q.MentorId == mentorId && q.IsDeleted == false)
                 .ToListAsync();
 
             return quizzes;
