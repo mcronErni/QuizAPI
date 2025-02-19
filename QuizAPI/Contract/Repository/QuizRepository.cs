@@ -69,7 +69,6 @@ namespace QuizAPI.Contract.Repository
         {
             Console.WriteLine(quiz.QuizId);
             Console.WriteLine(id);
-            // Load the existing quiz including its related questions
             var quizToBeEdited = await _context.Quizzes
                 .Include(q => q.Questions)
                 .FirstOrDefaultAsync(q => q.QuizId == id);
@@ -79,12 +78,9 @@ namespace QuizAPI.Contract.Repository
                 return null;
             }
 
-            // Update the properties of the quiz
             quizToBeEdited.QuizTitle = quiz.QuizTitle;
             quizToBeEdited.TotalScore = quiz.TotalScore;
 
-            // Update the related questions
-            // First, remove any questions that are no longer in the updated quiz
             var questionsToRemove = quizToBeEdited.Questions
                 .Where(q => !quiz.Questions.Any(q2 => q2.QuestionId == q.QuestionId))
                 .ToList();
@@ -93,21 +89,25 @@ namespace QuizAPI.Contract.Repository
                 _context.Questions.Remove(question);
             }
 
-            // Next, update existing questions and add new ones
+
             foreach (var question in quiz.Questions)
             {
                 var existingQuestion = quizToBeEdited.Questions
                     .FirstOrDefault(q => q.QuestionId == question.QuestionId);
                 if (existingQuestion != null)
                 {
-                    // Update existing question
                     existingQuestion.MQuestion = question.MQuestion;
                     existingQuestion.Answer = question.Answer;
-                    // Update other properties as needed
+                    existingQuestion.Choices = question.Choices
+                        .Where(c => !string.IsNullOrWhiteSpace(c)).ToList();
+
+                    if (!existingQuestion.Choices.Contains(existingQuestion.Answer))
+                    {
+                        existingQuestion.Choices.Add(existingQuestion.Answer);
+                    }
                 }
                 else
                 {
-                    // Add new question
                     quizToBeEdited.Questions.Add(question);
                 }
             }

@@ -67,7 +67,7 @@ namespace QuizAPI.Controllers
         }
 
         // PUT api/<BootcamperController>/5
-        [HttpPatch("{id}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult<QuizDTO>> Put([FromRoute]int id, [FromBody] QuizDTO quiz)
         {
             var mappedQuiz = _mapper.Map<Quiz>(quiz);
