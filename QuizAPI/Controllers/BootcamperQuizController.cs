@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -9,6 +10,7 @@ using QuizAPI.Model;
 
 namespace QuizAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BootcamperQuizController : ControllerBase
@@ -24,6 +26,7 @@ namespace QuizAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "mentor")]
         public async Task<ActionResult<IEnumerable<BootcamperQuizDTO>>> GetAll([FromRoute] int id)
         {
             var bq = await _bootcamperQuizRepository.GetAllBootcamperQuizByQuizId(id);
@@ -36,6 +39,7 @@ namespace QuizAPI.Controllers
         }
 
         [HttpGet("bootcamper/{id}")]
+        [Authorize(Roles = "bootcamper")]
         public async Task<ActionResult<IEnumerable<BootcamperQuizDTO>>> GetAllForBootcamper([FromRoute] int id)
         {
             var bq = await _bootcamperQuizRepository.GetBootcamperQuizForBootcamperAllQuiz(id);
@@ -47,6 +51,7 @@ namespace QuizAPI.Controllers
             return Ok(mapped);
         }
 
+        [Authorize(Roles = "mentor")]
         [HttpGet("{bootcamperId}/{quizId}")]
         public async Task<ActionResult<BootcamperQuizDTO>> GetById([FromRoute] int bootcamperId, [FromRoute]int quizId)
         {
@@ -60,6 +65,7 @@ namespace QuizAPI.Controllers
             return Ok(mapped);
         }
 
+        [Authorize(Roles = "bootcamper")]
         [HttpPost]
         public async Task<ActionResult<BootcamperQuizDTO>> AddBootcamperQuiz(AddBootcamperQuizDTO addBootcamperQuizDTO)
         {

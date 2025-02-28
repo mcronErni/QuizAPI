@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QuizAPI.Contract.Interface;
 using QuizAPI.Domain.DTO;
@@ -8,6 +9,7 @@ using QuizAPI.Model;
 
 namespace QuizAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BootcamperController : ControllerBase
@@ -22,6 +24,7 @@ namespace QuizAPI.Controllers
         }
         // GET: api/<BootcamperController>
         [HttpGet]
+        [Authorize(Roles = "mentor")]
         public async Task<ActionResult<IEnumerable<ListAllBootcamperDTO>>> GetAsync()
         {
             var bootcampers = await _bootcamperRepository.Get();

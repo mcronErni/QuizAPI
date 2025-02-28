@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using QuizAPI.Contract.DTO;
@@ -93,18 +94,22 @@ namespace QuizAPI.Controllers
         new Claim(ClaimTypes.NameIdentifier, account.AccountId.ToString()),
         new Claim(ClaimTypes.Name, account.Username),
         new Claim(ClaimTypes.Role, account.Role),
-        new Claim(JwtRegisteredClaimNames.Exp, DateTime.UtcNow.AddHours(1).ToString())
+        //new Claim(JwtRegisteredClaimNames.Exp, DateTime.UtcNow.AddHours(1).ToString())
     };
 
             // Generate JWT Token
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["AppSettings:Token"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+            //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["AppSettings:Token"]));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+            //var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = creds
+                SigningCredentials = creds,
+                Issuer = _config["Jwt:Issuer"],
+                Audience = _config["Jwt:Audience"]
             };
 
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -168,10 +173,10 @@ namespace QuizAPI.Controllers
                 mentorId = account.MentorId,  // Only if applicable
                 bootcamperId = account.BootcamperId, // Only if applicable
                 mentorName = account.Mentor?.MentorName, // Add mentor name if applicable
-                bootcamperName = account.Bootcamper?.Name // Add bootcamper name if applicable
+                bootcamperName = account.Bootcamper?.Name, // Add bootcamper name if applicable
+                jwt = tokenString // this might not be secure
             });
         }
-
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {

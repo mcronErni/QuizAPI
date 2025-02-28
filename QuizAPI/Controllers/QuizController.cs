@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QuizAPI.Contract.Interface;
 using QuizAPI.Domain.DTO;
@@ -8,6 +9,7 @@ using QuizAPI.Model;
 
 namespace QuizAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class QuizController : ControllerBase
@@ -45,6 +47,7 @@ namespace QuizAPI.Controllers
         }
 
         // POST api/<BootcamperController>
+        [Authorize(Roles = "mentor")]
         [HttpPost]
         public async Task<ActionResult<QuizDTO>> PostAsync([FromBody] QuizDTO quiz)
         {
@@ -88,6 +91,7 @@ namespace QuizAPI.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = "mentor")]
         [HttpGet("Mentor/{id}")]
         public async Task<ActionResult<ListQuizDTO>> GetByMentorId(int id)
         {

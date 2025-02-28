@@ -40,7 +40,6 @@ namespace QuizAPI.Contract.Repository
 
         public async Task<Account> Login(string usernameOrEmail, string password)
         {
-            // Fetch the Account first
             var account = await _context.Accounts
                 .FirstOrDefaultAsync(x => x.Username == usernameOrEmail || x.Email == usernameOrEmail);
 
@@ -52,17 +51,15 @@ namespace QuizAPI.Contract.Repository
             // Based on the role, conditionally load the related entity
             if (account.Role == "bootcamper")
             {
-                // Load Bootcamper details if the role is "bootcamper"
                 await _context.Entry(account)
                     .Reference(a => a.Bootcamper)
-                    .LoadAsync(); // This will load the Bootcamper entity
+                    .LoadAsync();
             }
             else if (account.Role == "mentor")
             {
-                // Load Mentor details if the role is "mentor"
                 await _context.Entry(account)
                     .Reference(a => a.Mentor)
-                    .LoadAsync(); // This will load the Mentor entity
+                    .LoadAsync();
             }
 
             if (!VerifyPasswordHash(password, account.PasswordHash, account.PasswordSalt))

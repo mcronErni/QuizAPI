@@ -24,17 +24,38 @@ builder.Services.AddScoped<IMentorRepository, MentorRepository>();
 
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//    .AddJwtBearer(options =>
+//    {
+//        options.TokenValidationParameters = new TokenValidationParameters
+//        {
+//            ValidateIssuerSigningKey = true,
+//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Token"])),
+//            ValidateIssuer = false,
+//            ValidateAudience = false
+//        };
+//    });
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters
         {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Token"])),
-            ValidateIssuer = false,
-            ValidateAudience = false
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
     });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("BootcamperPolicy", policy => policy.RequireRole("bootcamper"));
+    options.AddPolicy("MentorPolicy", policy => policy.RequireRole("mentor"));
+});
 
 builder.Services.AddHttpContextAccessor();
 
@@ -52,9 +73,9 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder.WithOrigins("http://localhost:5173")
+                   .AllowCredentials()
                    .AllowAnyHeader()
-                   .AllowAnyMethod()
-                   .AllowCredentials();
+                   .AllowAnyMethod();
         });
 });
 //
@@ -74,16 +95,17 @@ if (app.Environment.IsDevelopment())
 //CORS
 app.UseRouting();
 app.UseCors("AllowReactApp");
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseHttpsRedirection();
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
 
-app.UseHttpsRedirection();
 
-app.UseAuthentication();
 
-app.UseAuthorization();
 
 app.MapControllers();
 
