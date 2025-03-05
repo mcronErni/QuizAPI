@@ -76,7 +76,7 @@ namespace QuizAPI.Controllers
                 return BadRequest();
             }
             var updatedMentor = _mapper.Map<ListMentorDTO>(createdMt);
-            return CreatedAtAction(nameof(GetMentor), new { id = createdMt.MentorId }, updatedMentor);
+            return CreatedAtAction(nameof(GetMentor), new { id = createdMt.Id }, updatedMentor);
             //return StatusCode(201);
         }
 

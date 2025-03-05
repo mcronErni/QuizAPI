@@ -35,7 +35,7 @@ namespace QuizAPI.Contract.Repository
         public async Task<Bootcamper?> DeleteBootcamper(int id)
         {
             var bootcamper = await _context.Bootcampers
-                .FirstOrDefaultAsync(bc => bc.BootcamperId == id);
+                .FirstOrDefaultAsync(bc => bc.Id == id);
             if (bootcamper == null) 
             { 
                 return null;
@@ -59,8 +59,20 @@ namespace QuizAPI.Contract.Repository
         {
             var bootcampers = await _context.Bootcampers
                 .Include(q => q.BootcamperQuizzes)
-                .FirstOrDefaultAsync(bc => bc.BootcamperId == id);
+                .FirstOrDefaultAsync(bc => bc.Id == id);
             if(bootcampers == null)
+            {
+                return null;
+            }
+            return bootcampers;
+        }
+
+        public async Task<Bootcamper?> GetByAccountId(int id)
+        {
+            var bootcampers = await _context.Bootcampers
+                .Include(q => q.BootcamperQuizzes)
+                .FirstOrDefaultAsync(bc => bc.AccountId == id);
+            if (bootcampers == null)
             {
                 return null;
             }

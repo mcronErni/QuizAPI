@@ -52,14 +52,13 @@ namespace QuizAPI.Controllers
         public async Task<ActionResult<BootcamperDTO>> PostAsync([FromBody] BootcamperDTO bootcamper)
         {
             var mappedBootcamper = _mapper.Map<Bootcamper>(bootcamper);
-            Console.WriteLine(mappedBootcamper.Name);
             var createdBc = await _bootcamperRepository.CreateBootcamper(mappedBootcamper);
             if(createdBc == null)
             {
                 return BadRequest();
             }
-            Console.WriteLine(createdBc.BootcamperId);
-            return CreatedAtAction(nameof(GetById), new {id = createdBc.BootcamperId}, _mapper.Map<BootcamperDTO>(bootcamper));
+            Console.WriteLine(createdBc.Id);
+            return CreatedAtAction(nameof(GetById), new {id = createdBc.Id}, _mapper.Map<BootcamperDTO>(bootcamper));
             //return StatusCode(201);
         }
 

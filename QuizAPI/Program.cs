@@ -66,7 +66,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 
-//
+// for cors again?
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
@@ -82,7 +82,6 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -92,7 +91,7 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-//CORS
+// for CORS?
 app.UseRouting();
 app.UseCors("AllowReactApp");
 app.UseAuthentication();

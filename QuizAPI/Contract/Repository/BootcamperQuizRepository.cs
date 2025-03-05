@@ -14,34 +14,40 @@ namespace QuizAPI.Contract.Repository
         {
             _context = context;
         }
-        public async Task<BootcamperQuiz> CreateBootcamperQuiz(BootcamperQuiz bq)
+        public async Task<BootcamperQuiz> CreateBootcamperQuiz(BootcamperQuiz input)
         {
-            var bootcamper = await _context.Bootcampers.FirstOrDefaultAsync(bc => bc.BootcamperId == bq.BootcamperId);
-            var quiz = await _context.Quizzes.FirstOrDefaultAsync(q => q.QuizId == bq.QuizId);
+            //var bootcamperQuiz = await _context.BootcamperQuizzes
+            //    //.Include(q => q.Quiz)
+            //    //.Include(b => b.Bootcampers)
+            //    .Where(bq => bq.BootcamperId == input.BootcamperId && bq.QuizId == input.QuizId).FirstOrDefaultAsync();
+            //.AsQueryable();
+
+            var bootcamper = await _context.Bootcampers.FirstOrDefaultAsync(bc => bc.Id == input.BootcamperId);
+            var quiz = await _context.Quizzes.FirstOrDefaultAsync(q => q.Id == input.QuizId);
 
             if (bootcamper == null || quiz == null)
             {
                 return null;
             }
 
-            var result = await _context.BootcamperQuizzes.FindAsync(bq.BootcamperId, bq.QuizId);
+            var result = await _context.BootcamperQuizzes.FindAsync(input.BootcamperId, input.QuizId);
+
+            //bootcamperQuiz = bootcamperQuiz.Where(bq => bq.BootcamperId == input.BootcamperId && bq.QuizId == input.QuizId);
 
             if(result == null)
             {
-                var bootcamperQuiz = await _context.BootcamperQuizzes.AddAsync(bq);
-                if (bootcamperQuiz == null)
-                {
-                    return null;
-                }
+                await _context.BootcamperQuizzes.AddAsync(input);
                 await _context.SaveChangesAsync();
-                return bootcamperQuiz.Entity;
+                //if (bootcamperQuiz == null)
+                //{
+                //    return null;
+                //}
+                //return bootcamperQuiz.Entity;
             }
-            else
-            {
-                result.Score = bq.Score;
+                result.Score = input.Score;
                 await _context.SaveChangesAsync();
                 return result;
-            }
+            
 
             
             
@@ -50,9 +56,9 @@ namespace QuizAPI.Contract.Repository
         public async Task<ICollection<BootcamperQuiz>> GetAllBootcamperQuizByQuizId(int quizId)
         {
             var bootcamperQuiz = await _context.BootcamperQuizzes.Where(q => q.QuizId == quizId)
-                .Include(q => q.Quizzes)
+                .Include(q => q.Quiz)
                 .Include(b => b.Bootcampers)
-                .Where(q => q.Quizzes.IsDeleted == false)
+                .Where(q => q.Quiz.IsDeleted == false)
                 .ToListAsync();
             if(bootcamperQuiz == null)
             {
@@ -74,9 +80,9 @@ namespace QuizAPI.Contract.Repository
         public async Task<ICollection<BootcamperQuiz>> GetBootcamperQuizForBootcamperAllQuiz(int bootcamperId)
         {
             var bootcamperQuiz = await _context.BootcamperQuizzes.Where(q => q.BootcamperId == bootcamperId)
-                .Include(q => q.Quizzes)
+                .Include(q => q.Quiz)
                 .Include(b => b.Bootcampers)
-                .Where(q => q.Quizzes.IsDeleted == false)
+                .Where(q => q.Quiz.IsDeleted == false)
                 .ToListAsync();
             if (bootcamperQuiz == null)
             {

@@ -35,7 +35,7 @@ namespace QuizAPI.Contract.Repository
         public async Task<Mentor?> DeleteMentor(int id)
         {
             var mentor = await _context.Mentors
-                .FirstOrDefaultAsync(bc => bc.MentorId == id);
+                .FirstOrDefaultAsync(bc => bc.Id == id);
             if (mentor == null)
             {
                 return null;
@@ -55,7 +55,19 @@ namespace QuizAPI.Contract.Repository
         {
             var mentor = await _context.Mentors
                 .Include(q => q.Quizzes)
-                .FirstOrDefaultAsync(bc => bc.MentorId == id);
+                .FirstOrDefaultAsync(bc => bc.Id == id);
+            if (mentor == null)
+            {
+                return null;
+            }
+            return mentor;
+        }
+
+        public async Task<Mentor?> GetByAccountId(int id)
+        {
+            var mentor = await _context.Mentors
+                .Include(q => q.Quizzes)
+                .FirstOrDefaultAsync(bc => bc.AccountId == id);
             if (mentor == null)
             {
                 return null;

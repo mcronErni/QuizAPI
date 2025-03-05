@@ -23,21 +23,19 @@ namespace QuizAPI.Migrations
 
             modelBuilder.Entity("QuizAPI.Model.Account", b =>
                 {
-                    b.Property<int>("AccountId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccountId"));
-
-                    b.Property<int?>("BootcamperId")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("MentorId")
-                        .HasColumnType("int");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
@@ -55,32 +53,25 @@ namespace QuizAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("AccountId");
-
-                    b.HasIndex("BootcamperId")
-                        .IsUnique()
-                        .HasFilter("[BootcamperId] IS NOT NULL");
-
-                    b.HasIndex("MentorId")
-                        .IsUnique()
-                        .HasFilter("[MentorId] IS NOT NULL");
+                    b.HasKey("Id");
 
                     b.ToTable("Accounts");
                 });
 
             modelBuilder.Entity("QuizAPI.Model.Bootcamper", b =>
                 {
-                    b.Property<int>("BootcamperId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BootcamperId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("AccountId")
+                        .HasColumnType("int");
 
-                    b.HasKey("BootcamperId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
 
                     b.ToTable("Bootcampers");
                 });
@@ -105,28 +96,29 @@ namespace QuizAPI.Migrations
 
             modelBuilder.Entity("QuizAPI.Model.Mentor", b =>
                 {
-                    b.Property<int>("MentorId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MentorId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("MentorName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("AccountId")
+                        .HasColumnType("int");
 
-                    b.HasKey("MentorId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
 
                     b.ToTable("Mentors");
                 });
 
             modelBuilder.Entity("QuizAPI.Model.Question", b =>
                 {
-                    b.Property<int>("QuestionId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QuestionId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Answer")
                         .IsRequired()
@@ -143,7 +135,7 @@ namespace QuizAPI.Migrations
                     b.Property<int?>("QuizId")
                         .HasColumnType("int");
 
-                    b.HasKey("QuestionId");
+                    b.HasKey("Id");
 
                     b.HasIndex("QuizId");
 
@@ -152,11 +144,11 @@ namespace QuizAPI.Migrations
 
             modelBuilder.Entity("QuizAPI.Model.Quiz", b =>
                 {
-                    b.Property<int>("QuizId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QuizId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -171,26 +163,22 @@ namespace QuizAPI.Migrations
                     b.Property<int>("TotalScore")
                         .HasColumnType("int");
 
-                    b.HasKey("QuizId");
+                    b.HasKey("Id");
 
                     b.HasIndex("MentorId");
 
                     b.ToTable("Quizzes");
                 });
 
-            modelBuilder.Entity("QuizAPI.Model.Account", b =>
+            modelBuilder.Entity("QuizAPI.Model.Bootcamper", b =>
                 {
-                    b.HasOne("QuizAPI.Model.Bootcamper", "Bootcamper")
-                        .WithOne("Account")
-                        .HasForeignKey("QuizAPI.Model.Account", "BootcamperId");
+                    b.HasOne("QuizAPI.Model.Account", "Account")
+                        .WithMany()
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("QuizAPI.Model.Mentor", "Mentor")
-                        .WithOne("Account")
-                        .HasForeignKey("QuizAPI.Model.Account", "MentorId");
-
-                    b.Navigation("Bootcamper");
-
-                    b.Navigation("Mentor");
+                    b.Navigation("Account");
                 });
 
             modelBuilder.Entity("QuizAPI.Model.BootcamperQuiz", b =>
@@ -198,18 +186,29 @@ namespace QuizAPI.Migrations
                     b.HasOne("QuizAPI.Model.Bootcamper", "Bootcampers")
                         .WithMany("BootcamperQuizzes")
                         .HasForeignKey("BootcamperId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("QuizAPI.Model.Quiz", "Quizzes")
-                        .WithMany("BootcamperQuizzes")
+                    b.HasOne("QuizAPI.Model.Quiz", "Quiz")
+                        .WithMany()
                         .HasForeignKey("QuizId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Bootcampers");
 
-                    b.Navigation("Quizzes");
+                    b.Navigation("Quiz");
+                });
+
+            modelBuilder.Entity("QuizAPI.Model.Mentor", b =>
+                {
+                    b.HasOne("QuizAPI.Model.Account", "Account")
+                        .WithMany()
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
                 });
 
             modelBuilder.Entity("QuizAPI.Model.Question", b =>
@@ -232,24 +231,16 @@ namespace QuizAPI.Migrations
 
             modelBuilder.Entity("QuizAPI.Model.Bootcamper", b =>
                 {
-                    b.Navigation("Account")
-                        .IsRequired();
-
                     b.Navigation("BootcamperQuizzes");
                 });
 
             modelBuilder.Entity("QuizAPI.Model.Mentor", b =>
                 {
-                    b.Navigation("Account")
-                        .IsRequired();
-
                     b.Navigation("Quizzes");
                 });
 
             modelBuilder.Entity("QuizAPI.Model.Quiz", b =>
                 {
-                    b.Navigation("BootcamperQuizzes");
-
                     b.Navigation("Questions");
                 });
 #pragma warning restore 612, 618

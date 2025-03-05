@@ -25,7 +25,7 @@ namespace QuizAPI.Contract.Repository
 
         public async Task<Quiz?> DeleteQuiz(int id)
         {
-            var quiz = await _context.Quizzes.FirstOrDefaultAsync(q => q.QuizId == id);
+            var quiz = await _context.Quizzes.FirstOrDefaultAsync(q => q.Id == id);
             if (quiz == null) { return null; }
             quiz.IsDeleted = true;
             //_context.Remove(quiz);
@@ -47,7 +47,7 @@ namespace QuizAPI.Contract.Repository
             var quiz = await _context.Quizzes
                 .Include(q => q.Questions)
                 .Where(q => q.IsDeleted == false)
-                .FirstOrDefaultAsync(q => q.QuizId.Equals(id));
+                .FirstOrDefaultAsync(q => q.Id.Equals(id));
             if(quiz == null)
             {
                 return null;
@@ -67,11 +67,11 @@ namespace QuizAPI.Contract.Repository
 
         public async Task<Quiz>? UpdateQuiz(int id, Quiz quiz)
         {
-            Console.WriteLine(quiz.QuizId);
+            Console.WriteLine(quiz.Id);
             Console.WriteLine(id);
             var quizToBeEdited = await _context.Quizzes
                 .Include(q => q.Questions)
-                .FirstOrDefaultAsync(q => q.QuizId == id);
+                .FirstOrDefaultAsync(q => q.Id == id);
 
             if (quizToBeEdited == null)
             {
@@ -82,7 +82,7 @@ namespace QuizAPI.Contract.Repository
             quizToBeEdited.TotalScore = quiz.TotalScore;
 
             var questionsToRemove = quizToBeEdited.Questions
-                .Where(q => !quiz.Questions.Any(q2 => q2.QuestionId == q.QuestionId))
+                .Where(q => !quiz.Questions.Any(q2 => q2.Id == q.Id))
                 .ToList();
             foreach (var question in questionsToRemove)
             {
@@ -93,7 +93,7 @@ namespace QuizAPI.Contract.Repository
             foreach (var question in quiz.Questions)
             {
                 var existingQuestion = quizToBeEdited.Questions
-                    .FirstOrDefault(q => q.QuestionId == question.QuestionId);
+                    .FirstOrDefault(q => q.Id == question.Id);
                 if (existingQuestion != null)
                 {
                     existingQuestion.MQuestion = question.MQuestion;

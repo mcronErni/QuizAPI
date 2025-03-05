@@ -20,7 +20,7 @@ namespace QuizAPI.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BootcamperQuiz>()
-                .HasKey(bq => new { bq.BootcamperId, bq.QuizId});
+                .HasKey(bq => new { bq.BootcamperId, bq.QuizId });
             base.OnModelCreating(modelBuilder);
         }
 

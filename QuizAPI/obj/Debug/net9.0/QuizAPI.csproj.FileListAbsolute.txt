@@ -6,9 +6,11 @@ C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\QuizAPI.deps.json
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\QuizAPI.runtimeconfig.json
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\QuizAPI.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\QuizAPI.pdb
+C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\AutoMapper.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\Humanizer.dll
+C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -247,6 +249,7 @@ C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.AssemblyI
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.csproj.CoreCompileInputs.cache
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.sourcelink.json
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\scopedcss\bundle\QuizAPI.styles.css
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\staticwebassets.development.json
@@ -264,6 +267,3 @@ C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\refint\QuizAPI.dl
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.pdb
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.genruntimeconfig.cache
 C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\ref\QuizAPI.dll
-C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\AutoMapper.dll
-C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\obj\Debug\net9.0\QuizAPI.sourcelink.json
-C:\Users\extcrmh\source\repos\QuizAPI\QuizAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

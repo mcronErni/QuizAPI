@@ -39,7 +39,7 @@ namespace QuizAPI.Controllers
         [HttpPost("register")]
         public async Task<ActionResult> Register(RegisterAccountDTO account)
         {
-            // Create the account first
+            //validation first
             var accountToCreate = _mapper.Map<Account>(account);
 
             var createdAccount = await _authRepository.Register(accountToCreate, account.Password);
@@ -47,37 +47,52 @@ namespace QuizAPI.Controllers
             if (createdAccount == null)
                 return BadRequest("Username already exists");
 
-            // Now create the Bootcamper or Mentor based on role
-            if (account.Role.ToLower() == "bootcamper")
+            if (account.Role == "mentor")
             {
-                // Create Bootcamper and associate with Account
-                var bootcamper = new Bootcamper
+                var mentor = new Mentor()
                 {
-                    Name = account.Name,
+                    AccountId = createdAccount.Id,
                 };
 
-                createdAccount.Bootcamper = bootcamper;
-                createdAccount.BootcamperId = bootcamper.BootcamperId;
-
-                // Add the Bootcamper to the context and save it
-                await _bootcamperRepository.CreateBootcamper(bootcamper);
-            }
-            else if (account.Role.ToLower() == "mentor")
-            {
-                // Create Mentor and associate with Account
-                var mentor = new Mentor
-                {
-                    MentorName = account.Name
-                };
-
-                createdAccount.Mentor = mentor;
-                createdAccount.MentorId = mentor.MentorId;
-
-                // Add the Mentor to the context and save it
                 await _mentorRepository.CreateMentor(mentor);
+
+                return Created();
             }
 
-            return StatusCode(201);
+            var bootcamper = new Bootcamper()
+            {
+                AccountId = createdAccount.Id,
+            };
+            await _bootcamperRepository.CreateBootcamper(bootcamper);
+            return Created();
+
+
+            //if (account.Role.ToLower() == "bootcamper")
+            //{
+            //    var bootcamper = new Bootcamper
+            //    {
+            //        Name = account.Name,
+            //    };
+
+            //    createdAccount.Bootcamper = bootcamper;
+            //    createdAccount.BootcamperId = bootcamper.BootcamperId;
+
+            //    await _bootcamperRepository.CreateBootcamper(bootcamper);
+            //}
+            //else if (account.Role.ToLower() == "mentor")
+            //{
+            //    var mentor = new Mentor
+            //    {
+            //        MentorName = account.Name
+            //    };
+
+            //    createdAccount.Mentor = mentor;
+            //    createdAccount.MentorId = mentor.MentorId;
+
+            //    await _mentorRepository.CreateMentor(mentor);
+            //}
+
+            //return StatusCode(201);
         }
 
         [HttpPost("login")]
@@ -88,16 +103,14 @@ namespace QuizAPI.Controllers
             if (account == null)
                 return Unauthorized("Invalid username or password");
 
-            // Create JWT claims
             var claims = new List<Claim>
     {
-        new Claim(ClaimTypes.NameIdentifier, account.AccountId.ToString()),
+        new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
         new Claim(ClaimTypes.Name, account.Username),
         new Claim(ClaimTypes.Role, account.Role),
         //new Claim(JwtRegisteredClaimNames.Exp, DateTime.UtcNow.AddHours(1).ToString())
     };
-
-            // Generate JWT Token
+            
             //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["AppSettings:Token"]));
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             //var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
@@ -134,46 +147,53 @@ namespace QuizAPI.Controllers
             });
 
             // Store the bootcamperId or mentorId in a cookie (optional)
-            if (account.BootcamperId.HasValue)
-            {
-                Response.Cookies.Append("bootcamperId", account.BootcamperId.Value.ToString(), new CookieOptions
-                {
-                    HttpOnly = true,
-                    Secure = true,
-                    Expires = DateTime.UtcNow.AddHours(1)
-                });
-                Response.Cookies.Append("bootcamperName", account.Bootcamper.Name, new CookieOptions
-                {
-                    HttpOnly = true,
-                    Secure = true,
-                    Expires = DateTime.UtcNow.AddHours(1)
-                });
-            }
-            else if (account.MentorId.HasValue)
-            {
-                Response.Cookies.Append("mentorId", account.MentorId.Value.ToString(), new CookieOptions
-                {
-                    HttpOnly = true,
-                    Secure = true,
-                    Expires = DateTime.UtcNow.AddHours(1)
-                });
-                Response.Cookies.Append("mentorName", account.Mentor.MentorName, new CookieOptions
-                {
-                    HttpOnly = true,
-                    Secure = true,
-                    Expires = DateTime.UtcNow.AddHours(1)
-                });
-            }
+            //if (account.Id.HasValue)
+            //{
+            //    Response.Cookies.Append("bootcamperId", account.id.Value.ToString(), new CookieOptions
+            //    {
+            //        HttpOnly = true,
+            //        Secure = true,
+            //        Expires = DateTime.UtcNow.AddHours(1)
+            //    });
+            //    Response.Cookies.Append("bootcamperName", account.Id.Name, new CookieOptions
+            //    {
+            //        HttpOnly = true,
+            //        Secure = true,
+            //        Expires = DateTime.UtcNow.AddHours(1)
+            //    });
+            //}
+            //else if (account.MentorId.HasValue)
+            //{
+            //    Response.Cookies.Append("mentorId", account.MentorId.Value.ToString(), new CookieOptions
+            //    {
+            //        HttpOnly = true,
+            //        Secure = true,
+            //        Expires = DateTime.UtcNow.AddHours(1)
+            //    });
+            //    Response.Cookies.Append("mentorName", account.Mentor.MentorName, new CookieOptions
+            //    {
+            //        HttpOnly = true,
+            //        Secure = true,
+            //        Expires = DateTime.UtcNow.AddHours(1)
+            //    });
+            //}
 
-            // Return a minimal response (no token in body, since it's in the cookie)
+            var mentorId = await _mentorRepository.GetByAccountId(account.Id);
+            var bootcamperId = await _bootcamperRepository.GetByAccountId(account.Id);
+
+            var bcId = 0;
+            var mId = 0;
+            if(bootcamperId != null)
+                bcId = bootcamperId.Id;
+            if (mentorId != null)
+                mId = mentorId.Id;
             return Ok(new
             {
                 message = "Login successful",
                 role = account.Role,
-                mentorId = account.MentorId,  // Only if applicable
-                bootcamperId = account.BootcamperId, // Only if applicable
-                mentorName = account.Mentor?.MentorName, // Add mentor name if applicable
-                bootcamperName = account.Bootcamper?.Name, // Add bootcamper name if applicable
+                mentorId = mId,
+                bootcamperId = bcId,
+                name = account.Name,
                 jwt = tokenString // this might not be secure
             });
         }

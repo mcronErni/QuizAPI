@@ -65,7 +65,7 @@ namespace QuizAPI.Controllers
             return Ok(mapped);
         }
 
-        [Authorize(Roles = "bootcamper")]
+        //[Authorize(Roles = "bootcamper")]
         [HttpPost]
         public async Task<ActionResult<BootcamperQuizDTO>> AddBootcamperQuiz(AddBootcamperQuizDTO addBootcamperQuizDTO)
         {

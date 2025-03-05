@@ -65,7 +65,7 @@ namespace QuizAPI.Controllers
             {
                 return BadRequest();
             }
-            return CreatedAtAction(nameof(GetById), new {id = createdQuiz.QuizId}, _mapper.Map<QuizDTO>(createdQuiz));
+            return CreatedAtAction(nameof(GetById), new {id = createdQuiz.Id}, _mapper.Map<QuizDTO>(createdQuiz));
             //return StatusCode(201);
         }
 

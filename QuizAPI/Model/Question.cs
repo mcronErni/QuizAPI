@@ -5,7 +5,7 @@ namespace QuizAPI.Model
     public class Question
     {
         [Key]
-        public int QuestionId { get; set; }
+        public int Id { get; set; }
         [Required]
         public required string MQuestion { get; set; }
         [Required]

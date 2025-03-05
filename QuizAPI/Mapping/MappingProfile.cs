@@ -14,16 +14,16 @@ namespace QuizAPI.Mapping
             CreateMap<Bootcamper, ListOneBootcamperDTO>()
                 .ForMember(dest => dest.Quizzes, opt => opt.MapFrom(src => src.BootcamperQuizzes));
             CreateMap<BootcamperQuiz, BootcamperQuizDTO>()
-                .ForMember(dest => dest.QuizTitle, opt => opt.MapFrom(src => src.Quizzes.QuizTitle))
-                .ForMember(dest => dest.TotalScore, opt => opt.MapFrom(src => src.Quizzes.TotalScore))
-                .ForMember(dest => dest.BootcamperName, opt => opt.MapFrom(src => src.Bootcampers.Name));
+                .ForMember(dest => dest.QuizTitle, opt => opt.MapFrom(src => src.Quiz.QuizTitle))
+                .ForMember(dest => dest.TotalScore, opt => opt.MapFrom(src => src.Quiz.TotalScore));
+                //.ForMember(dest => dest.BootcamperName, opt => opt.MapFrom(src => src.Bootcampers.Name));
 
             CreateMap<Quiz, QuizDTO>();
                 //.ForMember(dest => dest.MentorName, opt => opt.MapFrom(src => src.Mentor.MentorName));
             CreateMap<QuizDTO, Quiz>();
 
-            CreateMap<Quiz, ListQuizDTO>()
-                .ForMember(dest => dest.MentorName, opt => opt.MapFrom(src => src.Mentor.MentorName));
+            CreateMap<Quiz, ListQuizDTO>();
+                //.ForMember(dest => dest.MentorName, opt => opt.MapFrom(src => src.Mentor.MentorName));
             CreateMap<ListQuizDTO, Quiz>();
 
             CreateMap<AddBootcamperQuizDTO, BootcamperQuiz>();

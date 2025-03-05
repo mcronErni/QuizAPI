@@ -6,7 +6,7 @@ namespace QuizAPI.Model
     public class Quiz
     {
         [Key]
-        public int QuizId { get; set; }
+        public int Id { get; set; }
         [Required]
         public string QuizTitle { get; set; }
         [Required]
@@ -17,11 +17,11 @@ namespace QuizAPI.Model
         [Required]
         public bool IsDeleted { get; set; }
 
-        [Required]
-        [ForeignKey(nameof(Mentor))]
+        //[Required]
+        //[ForeignKey(nameof(Mentor))]
         public int MentorId { get; set; }
         public required Mentor Mentor { get; set; }
 
-        public ICollection<BootcamperQuiz>? BootcamperQuizzes { get; set; }
+        //public ICollection<BootcamperQuiz>? BootcamperQuizzes { get; set; }
     }
 }

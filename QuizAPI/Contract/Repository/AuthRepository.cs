@@ -29,6 +29,7 @@ namespace QuizAPI.Contract.Repository
             byte[] passwordHash, passwordSalt;
             CreatePasswordHash(password, out passwordHash, out passwordSalt);
 
+           
             account.PasswordHash = passwordHash;
             account.PasswordSalt = passwordSalt;
 
@@ -49,18 +50,18 @@ namespace QuizAPI.Contract.Repository
             }
 
             // Based on the role, conditionally load the related entity
-            if (account.Role == "bootcamper")
-            {
-                await _context.Entry(account)
-                    .Reference(a => a.Bootcamper)
-                    .LoadAsync();
-            }
-            else if (account.Role == "mentor")
-            {
-                await _context.Entry(account)
-                    .Reference(a => a.Mentor)
-                    .LoadAsync();
-            }
+            //if (account.Role == "bootcamper")
+            //{
+            //    await _context.Entry(account)
+            //        .Reference(a => a.Bootcamper)
+            //        .LoadAsync();
+            //}
+            //else if (account.Role == "mentor")
+            //{
+            //    await _context.Entry(account)
+            //        .Reference(a => a.Mentor)
+            //        .LoadAsync();
+            //}
 
             if (!VerifyPasswordHash(password, account.PasswordHash, account.PasswordSalt))
                 return null;
